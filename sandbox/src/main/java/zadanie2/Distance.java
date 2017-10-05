@@ -6,6 +6,6 @@ public class Distance {
     Point d1 = new Point(1, 1);
     Point d2 = new Point(2, 2);
 
-    System.out.println(Point.distance(d1, d2));
+    System.out.println(d1.distance(d2));
   }
 }
