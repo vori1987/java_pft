@@ -8,4 +8,5 @@ public class Distance {
 
     System.out.println(d1.distance(d2));
   }
+
 }
