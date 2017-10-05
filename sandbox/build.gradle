@@ -3,7 +3,7 @@ apply plugin: 'application'
 mainClassName = "Distance"
 
 repositories {
-mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
