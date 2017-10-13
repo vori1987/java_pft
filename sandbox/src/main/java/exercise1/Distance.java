@@ -1,4 +1,4 @@
-package zadanie2;
+package exercise1;
 
 public class Distance {
 

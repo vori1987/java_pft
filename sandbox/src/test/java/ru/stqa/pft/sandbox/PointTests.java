@@ -2,7 +2,7 @@ package ru.stqa.pft.sandbox;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import zadanie2.Point;
+import exercise1.Point;
 
 public class PointTests {
   @Test
