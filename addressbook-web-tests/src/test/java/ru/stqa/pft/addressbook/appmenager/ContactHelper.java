@@ -12,7 +12,7 @@ public class ContactHelper extends HelperBase {
     super(wd);
   }
 
-  public void returnToHome() {
+  public void returnToHomePage() {
     click(By.linkText("home"));
   }
 
@@ -21,14 +21,13 @@ public class ContactHelper extends HelperBase {
   }
 
   public void fillContactForm(ContactData contactData, boolean creation) {
-
     type(By.name("firstname"), contactData.getFirstname());
     type(By.name("lastname"), contactData.getLastname());
     type(By.name("nickname"), contactData.getNickname());
     type(By.name("company"), contactData.getCompany());
     type(By.name("address"), contactData.getAddress());
     type(By.name("home"), contactData.getHomeTelephone());
-    type(By.name("home"), contactData.getTelephone());
+    type(By.name("mobile"), contactData.getTelephone());
     type(By.name("email"), contactData.getEmail());
 
     if (creation) {
@@ -42,11 +41,7 @@ public class ContactHelper extends HelperBase {
     click(By.linkText("add new"));
   }
 
-  /*public void selectContact() {
-    click(By.xpath("selected[]"));
-  }
-*/
-  public void initContactModification() {
+   public void initContactModification() {
     click(By.xpath("//table[@id='maintable']/tbody/tr[6]/td[8]/a/img"));
   }
 
@@ -58,5 +53,15 @@ public class ContactHelper extends HelperBase {
     click(By.xpath("//div[@id='content']/form[1]/input[22]"));
   }
 
+  public void createContact(ContactData contact) {
+    initContactCreation();
+    fillContactForm(contact, true);
+    submitContactCreation();
+    returnToHomePage();
+  }
+
+  public boolean isThereAContact() {
+    return isElementPresent(By.xpath("//table[@id='maintable']/tbody/tr[6]/td[8]/a/img"));
+  }
 }
 

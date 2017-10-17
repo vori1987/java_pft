@@ -20,7 +20,7 @@ public class HelperBase {
     click(locator);
     if (text != null) {
       String existingText = wd.findElement(locator).getAttribute("value");
-      if (! text.equals(existingText)) {
+      if (!text.equals(existingText)) {
         wd.findElement(locator).clear();
         wd.findElement(locator).sendKeys(text);
       }
@@ -37,11 +37,12 @@ public class HelperBase {
   }
 
   protected boolean isElementPresent(By locator) {
-   try{
-     wd.findElement(locator);
-     return  true;
-   } catch (NoSuchElementException ex){
-return false;
-   }
-     }
+    try {
+      wd.findElement(locator);
+      return true;
+    } catch (NoSuchElementException ex) {
+      return false;
+    }
+  }
+
 }
