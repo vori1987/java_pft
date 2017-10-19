@@ -17,7 +17,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void submitContactCreation() {
-    click(By.xpath("//div[@id='content']/form/input[21]"));
+    click(By.name("submit"));
   }
 
   public void fillContactForm(ContactData contactData, boolean creation) {
@@ -31,18 +31,23 @@ public class ContactHelper extends HelperBase {
     type(By.name("email"), contactData.getEmail());
 
     if (creation) {
-      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+     new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
     } else {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
-    }
+   }
   }
 
   public void initContactCreation() {
     click(By.linkText("add new"));
   }
 
+  /* public void selectContact() {
+    click(By.name("select[]"));
+  } */
+
+
    public void initContactModification() {
-    click(By.xpath("//table[@id='maintable']/tbody/tr[6]/td[8]/a/img"));
+    click(By.xpath("//html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]"));
   }
 
   public void submitContactDeletion() {
@@ -50,7 +55,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void submitContactModification() {
-    click(By.xpath("//div[@id='content']/form[1]/input[22]"));
+    click(By.name("//div[@id='content']/form[1]/input[22]"));
   }
 
   public void createContact(ContactData contact) {
@@ -61,7 +66,9 @@ public class ContactHelper extends HelperBase {
   }
 
   public boolean isThereAContact() {
-    return isElementPresent(By.xpath("//table[@id='maintable']/tbody/tr[6]/td[8]/a/img"));
+    return isElementPresent(By.name("select[]"));
   }
+
+
 }
 

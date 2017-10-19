@@ -36,7 +36,7 @@ public class HelperBase {
     }
   }
 
-  protected boolean isElementPresent(By locator) {
+  protected boolean  isElementPresent(By locator) {
     try {
       wd.findElement(locator);
       return true;
@@ -44,5 +44,4 @@ public class HelperBase {
       return false;
     }
   }
-
-}
+  }
