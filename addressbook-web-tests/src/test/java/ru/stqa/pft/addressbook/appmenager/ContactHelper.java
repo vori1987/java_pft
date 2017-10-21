@@ -47,7 +47,7 @@ public class ContactHelper extends HelperBase {
 
 
    public void initContactModification() {
-    click(By.xpath("//html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]"));
+    click(By.xpath("//tr[@name='entry'][1]//td[@class='center'][3]"));
   }
 
   public void submitContactDeletion() {
@@ -55,12 +55,12 @@ public class ContactHelper extends HelperBase {
   }
 
   public void submitContactModification() {
-    click(By.name("//div[@id='content']/form[1]/input[22]"));
+    click(By.xpath("//div[@id='content']/form[1]/input[22]"));
   }
 
-  public void createContact(ContactData contact) {
+  public void createContact(ContactData contact, boolean creation) {
     initContactCreation();
-    fillContactForm(contact, true);
+    fillContactForm(contact, creation);
     submitContactCreation();
     returnToHomePage();
   }
