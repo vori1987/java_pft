@@ -37,10 +37,10 @@ public class ContactHelper extends HelperBase {
     if (creation) {
       if (contactData.getGroup() != null) {
         new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
-      } else {
+        //     } else {
 //        Assert.assertFalse(isElementPresent(By.name("new_group")));
       }
-    } else {
+      //   } else {
 //      Assert.assertFalse(isElementPresent(By.name("new_group")));
     }
   }
@@ -54,9 +54,9 @@ public class ContactHelper extends HelperBase {
   } */
 
 
-  public void initContactModification() {
-     click(By.xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]"));
-  }
+//  public void initContactModification() {
+//    click(By.xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]"));
+//  }
 
   public void selectContact(int index) {
     wd.findElements(By.name("selected[]")).get(index).click();
@@ -66,9 +66,9 @@ public class ContactHelper extends HelperBase {
     click(By.xpath("/html/body/div/div[4]/form[2]/div[2]/input"));
   }
 
-     public void alertOk () {
-      wd.switchTo().alert().accept();
-    }
+  public void alertOk() {
+    wd.switchTo().alert().accept();
+  }
 
 
   public void submitContactModification() {
@@ -82,6 +82,16 @@ public class ContactHelper extends HelperBase {
     returnToHomePage();
   }
 
+//  public void editSelectedContact(int index) {
+//    //click(By.xpath("//tr[@name='entry'][1]//td[@class='center'][3]"));
+//    wd.findElements(By.cssSelector("a[href^='edit.php']")).get(index).click();
+//  }
+
+  public void editSelectedContact(int index) {
+    // click(By.xpath("//tr[@name='entry'][1]//td[@class='center'][3]"));
+    wd.findElements(By.cssSelector("a[href^='edit.php']")).get(index + 1).click();
+  }
+
   public boolean isThereAContact() {
     return isElementPresent(By.name("selected[]"));
   }
@@ -93,12 +103,12 @@ public class ContactHelper extends HelperBase {
 
   public List<ContactData> getContactList() {
     List<ContactData> contacts = new ArrayList<ContactData>();
-    List<WebElement> elements = wd.findElements((By.xpath("//tr[@name='entry']")));
+    List<WebElement> elements = wd.findElements((By.xpath(".//tr[@name='entry']")));
     for (WebElement element : elements) {
-      String id = element.findElement(By.id("input")).getAttribute("value"); // нужно поправить локализатор
-      String firsname = element.getText();
-      String lastname = element.getText();
-      ContactData contact = new ContactData(firsname, lastname, null, null, null, null, null, null, null);
+     // String id = element.findElement(By.id("input")).getAttribute("value"); // нужно поправить локализатор
+      String firstname = element.findElement(By.xpath(".//td[3]")).getText();
+      String lastname = element.findElement(By.xpath(".//td[2]")).getText();
+      ContactData contact = new ContactData(firstname, lastname, null, null, null, null, null, null, null);
       contacts.add(contact);
     }
     return contacts;
