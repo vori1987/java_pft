@@ -10,11 +10,11 @@ import java.util.List;
 
 public class ContactModificationTests extends TestBase {
 
-  @Test (enabled = false)
+  @Test(enabled = false)
   public void testContactModification() {
     app.goTo().goToHomePage();
 
-    if (! app.getContactHelper().isThereAContact()) {
+    if (!app.getContactHelper().isThereAContact()) {
       app.getContactHelper().createContact((new ContactData("name", null, null, null, null, null, null, null, null)), true);
     }
     List<ContactData> before = app.getContactHelper().getContactList();
