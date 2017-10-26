@@ -10,7 +10,7 @@ import org.openqa.selenium.remote.BrowserType;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
-public class AplicationManager {
+public class ApplicationManager {
   WebDriver wd;
 
   private SessionHelper sessionHelper;
@@ -19,7 +19,7 @@ public class AplicationManager {
   private ContactHelper contactHelper;
   private String browser;
 
-  public AplicationManager(String browser) {
+  public ApplicationManager(String browser) {
     this.browser = browser;
   }
 
