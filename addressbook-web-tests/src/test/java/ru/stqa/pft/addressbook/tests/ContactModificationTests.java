@@ -28,8 +28,9 @@ public class ContactModificationTests extends TestBase {
             withFirstname("test1").withLastname("test2").withNickname("test3").withCompany("MF").withAddress("Kupa2").withTelephone(null).
             withEmail(null).withHomeTelephone(null).withGroup(null);
     app.contact().modify(contact);
+    assertThat(app.contact().count(), equalTo(before.size()));
     Contacts after = app.contact().all();
-    assertEquals(after.size(), before.size());
+  //    assertEquals(after.size(), before.size());
 //    before.remove(modifiedContact);
 //    before.add(contact);
 //    Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getId(), c2.getId());
