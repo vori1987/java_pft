@@ -82,6 +82,14 @@ public class ContactHelper extends HelperBase {
     returnToHomePage();
   }
 
+  public void modifyContact(int index, ContactData contact) {
+    selectContact(index);
+    editSelectedContact(index);
+    fillContactForm(contact, false);
+    submitContactModification();
+    returnToHomePage();
+  }
+
 //  public void editSelectedContact(int index) {
 //    //click(By.xpath("//tr[@name='entry'][1]//td[@class='center'][3]"));
 //    wd.findElements(By.cssSelector("a[href^='edit.php']")).get(index).click();
