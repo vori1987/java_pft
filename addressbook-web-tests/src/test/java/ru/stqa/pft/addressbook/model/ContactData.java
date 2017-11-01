@@ -149,7 +149,7 @@ public class ContactData {
     return allEmails;
   }
 
-  public String getGroup() {
+   public String getGroup() {
     return group;
   }
 
