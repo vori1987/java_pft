@@ -10,6 +10,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import static com.sun.org.apache.xalan.internal.lib.ExsltStrings.split;
+
 public class ContactHelper extends HelperBase {
 
   public ContactHelper(WebDriver wd) {
@@ -81,7 +83,7 @@ public class ContactHelper extends HelperBase {
     initContactCreation();
     fillContactForm(contact, creation);
     submitContactCreation();
- //   contactCache = null;
+    //   contactCache = null;
     returnToHomePage();
   }
 
@@ -90,7 +92,7 @@ public class ContactHelper extends HelperBase {
     editSelectedContactById(contact.getId());
     fillContactForm(contact, false);
     submitContactModification();
- //   contactCache = null;
+    //   contactCache = null;
     returnToHomePage();
   }
 
@@ -122,7 +124,7 @@ public class ContactHelper extends HelperBase {
     selectContactById(contact.getId());
     deleteSelectedContact();
     alertOk();
- //   contactCache = null;
+    //   contactCache = null;
     returnToHomePage();
   }
 
@@ -180,9 +182,9 @@ public class ContactHelper extends HelperBase {
       int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
       String firstname = cells.get(2).getText();
       String lastname = cells.get(1).getText();
-      String[] phones = cells.get(5).getText().split("\n");
-      contacts.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname).withHomePhone(phones[0]).
-              withMobilePhone(phones[1]).withWorkPhone(phones[2]));
+      String allPhones = cells.get(5).getText();
+      contacts.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname).
+              withAllPhones(allPhones));
     }
     return contacts;
   }
