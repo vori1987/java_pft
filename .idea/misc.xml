@@ -3,4 +3,5 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8 (1)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="RegexUtilComponent" mode="3" regex="111 - 225/852//-+ &#10;&#10;&#10;" flags="0" text="1900-01-01 2007/08/13 1900.01.01 1900 01 01 1900-01.01 1900 13 01 1900 02 31" replacement="" />
 </project>
