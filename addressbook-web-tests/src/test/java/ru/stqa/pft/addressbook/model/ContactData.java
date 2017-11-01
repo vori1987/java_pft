@@ -16,6 +16,7 @@ public class ContactData {
   private String workPhone;
   private String allPhones;
   private String allEmails;
+  private String allContactInfo;
 
 
   public ContactData withEmailTwo(String emailTwo) {
@@ -40,6 +41,11 @@ public class ContactData {
 
   public ContactData withId(int id) {
     this.id = id;
+    return this;
+  }
+
+  public ContactData withAllContactInfo(String allContactInfo) {
+    this.allContactInfo = allContactInfo;
     return this;
   }
 
@@ -149,8 +155,12 @@ public class ContactData {
     return allEmails;
   }
 
-   public String getGroup() {
+  public String getGroup() {
     return group;
+  }
+
+  public String getAllContactInfo() {
+    return allContactInfo;
   }
 
   @Override

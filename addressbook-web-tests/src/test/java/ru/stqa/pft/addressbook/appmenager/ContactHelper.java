@@ -67,6 +67,10 @@ public class ContactHelper extends HelperBase {
     wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
   }
 
+  public void initContactInfoById(int id) {
+    wd.findElement(By.cssSelector(String.format("a[href='view.php?id=%s']", id))).click();
+  }
+
   public void deleteSelectedContact() {
     click(By.xpath("/html/body/div/div[4]/form[2]/div[2]/input"));
   }
