@@ -36,6 +36,7 @@ public class ContactHelper extends HelperBase {
     type(By.name("mobile"), contactData.getMobilePhone());
     type(By.name("email"), contactData.getEmailOne());
     type(By.name("work"), contactData.getWorkPhone());
+    attach(By.name("photo"), contactData.getPhoto());
 
 
     if (creation) {
@@ -64,7 +65,8 @@ public class ContactHelper extends HelperBase {
 //  }
 
   public void selectContactById(int id) {
-    wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+    //wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+    wd.findElement(By.xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[7]/a/img")).click();
   }
 
   public void initContactInfoById(int id) {
