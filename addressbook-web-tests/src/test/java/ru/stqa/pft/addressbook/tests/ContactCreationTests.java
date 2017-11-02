@@ -54,7 +54,8 @@ public class ContactCreationTests extends TestBase {
     app.goTo().goToHomePage();
     app.contact().initContactCreation();
     File photo = new File("src/test/resources/test_Image.png");
-    app.contact().fillContactForm(new ContactData().withFirstname("test1").withLastname("test2").withGroup(null).withPhoto(photo), true);
+    app.contact().fillContactForm(new ContactData().withFirstname("test1").withLastname("test2")
+            .withGroup(null).withPhoto(photo), true);
     app.contact().submitContactCreation();
     app.contact().returnToHomePage();
   }
