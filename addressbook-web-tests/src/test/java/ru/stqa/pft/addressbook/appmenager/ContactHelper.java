@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.ContactData;
+import ru.stqa.pft.addressbook.model.Contacts;
 
 import java.util.HashSet;
 import java.util.List;
@@ -175,23 +176,22 @@ public class ContactHelper extends HelperBase {
 //    return new Contacts(contactCache);
 //  }
 
-  public Set<ContactData> all() {
+  public Contacts all() {
 //    if (contactCache != null) {
 //      return new Contacts(contactCache);
 //    }
 //    contactCache = new Set<ContactData> all();
-    Set<ContactData> contacts = new HashSet<ContactData>();
-    List<WebElement> rows = wd.findElements((By.name("entry")));
-    for (WebElement row : rows) {
-      List<WebElement> cells = row.findElements(By.tagName("td"));
-      int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
-      String firstname = cells.get(2).getText();
-      String lastname = cells.get(1).getText();
-      String allPhones = cells.get(5).getText();
-      String allEmails = cells.get(4).getText();
-      String adresses = cells.get(3).getText();
+    Contacts contacts = new Contacts();
+    List<WebElement> elements = wd.findElements((By.name("entry")));
+    for (WebElement element : elements) {
+      int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
+      String firstname =  element.findElement(By.xpath(".//td[3]")).getText();
+      String lastname = element.findElement(By.xpath(".//td[2]")).getText();
+      String allPhones = element.findElement(By.xpath(".//td[6]")).getText();
+      String allEmails = element.findElement(By.xpath(".//td[5]")).getText();
+      String adress = element.findElement(By.xpath(".//td[4]")).getText();
       contacts.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname).
-              withAllPhones(allPhones).withAllEmails(allEmails).withAddress(adresses));
+              withAllPhones(allPhones).withAllEmails(allEmails).withAddress(adress));
     }
     return contacts;
   }

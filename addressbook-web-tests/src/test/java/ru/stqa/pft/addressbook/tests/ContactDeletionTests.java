@@ -1,4 +1,4 @@
-/*package ru.stqa.pft.addressbook.tests;
+package ru.stqa.pft.addressbook.tests;
 
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
@@ -24,7 +24,7 @@ public class ContactDeletionTests extends TestBase {
     }
   }
 
-  @Test (enabled = false)
+  @Test
   public void testContactDeletion() {
     Contacts before = app.contact().all();
     ContactData deletedContact = before.iterator().next();
@@ -40,4 +40,3 @@ public class ContactDeletionTests extends TestBase {
 
 }
 
-*/
