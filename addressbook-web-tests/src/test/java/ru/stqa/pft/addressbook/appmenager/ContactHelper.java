@@ -66,8 +66,8 @@ public class ContactHelper extends HelperBase {
 //  }
 
   public void selectContactById(int id) {
-    //wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
-    wd.findElement(By.xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[7]/a/img")).click();
+    wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+   // wd.findElement(By.xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[7]/a/img")).click();
   }
 
   public void initContactInfoById(int id) {
@@ -75,7 +75,8 @@ public class ContactHelper extends HelperBase {
   }
 
   public void deleteSelectedContact() {
-    click(By.xpath("/html/body/div/div[4]/form[2]/div[2]/input"));
+   // click(By.xpath("/html/body/div/div[4]/form[2]/div[2]/input"));
+    click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
   }
 
   public void alertOk() {
