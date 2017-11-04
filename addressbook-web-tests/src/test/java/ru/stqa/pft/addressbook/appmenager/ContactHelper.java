@@ -36,6 +36,8 @@ public class ContactHelper extends HelperBase {
     type(By.name("home"), contactData.getHomePhone());
     type(By.name("mobile"), contactData.getMobilePhone());
     type(By.name("email"), contactData.getEmailOne());
+    type(By.name("email2"), contactData.getEmailTwo());
+    type(By.name("email3"), contactData.getEmailThree());
     type(By.name("work"), contactData.getWorkPhone());
     attach(By.name("photo"), contactData.getPhoto());
 
@@ -43,7 +45,6 @@ public class ContactHelper extends HelperBase {
     if (creation) {
       if (contactData.getGroup() != null) {
         new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
-
       }
     }
   }
