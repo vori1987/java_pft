@@ -1,21 +1,39 @@
 package ru.stqa.pft.addressbook.tests;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ContactCreationTests extends TestBase {
 
-  @Test
-  public void testContactCreation() {
+  @DataProvider
+  public Iterator<Object[]> validContacts() {
+    List<Object[]> list = new ArrayList<Object[]>();
+    list.add(new Object[] {new ContactData(). withFirstname("firstname1").withLastname("lastname1").withNickname("nickname1").
+            withCompany("company1").withAddress("address1").withHomePhone("homephone1").withMobilePhone("mobile1").withWorkPhone("workphone1")
+            .withEmailOne("emailsOne1").withEmailTwo("emailTwo1").withEmailThree("emailThree1")});
+    list.add(new Object[] {new ContactData(). withFirstname("firstname2").withLastname("lastname2").withNickname("nickname2").
+            withCompany("company2").withAddress("address12").withHomePhone("homephone2").withMobilePhone("mobile2").withWorkPhone("workphone2")
+            .withEmailOne("emailsOne2").withEmailTwo("emailTwo2").withEmailThree("emailThree2")});
+    list.add(new Object[] {new ContactData(). withFirstname("firstname3").withLastname("lastname3").withNickname("nickname3").
+            withCompany("company3").withAddress("address13").withHomePhone("homephone3").withMobilePhone("mobile3").withWorkPhone("workphone3")
+            .withEmailOne("emailsOne3").withEmailTwo("emailTwo3").withEmailThree("emailThree3")});
+    return list.iterator();
+  }
+
+  @Test(dataProvider = "validContacts")
+  public void testContactCreation(ContactData contact) {
     app.goTo().goToHomePage();
     Contacts before = app.contact().all();
-    ContactData contact = new ContactData().withFirstname("test1").withLastname("test2");
     app.contact().create(contact, true);
     assertThat(app.contact().count(), equalTo(before.size() + 1));
     Contacts after = app.contact().all();
@@ -39,7 +57,7 @@ public class ContactCreationTests extends TestBase {
   }
 
 
-  @Test (enabled = false)
+  @Test(enabled = false)
   public void testBadContactCreation() {
     app.goTo().goToHomePage();
     Contacts before = app.contact().all();
