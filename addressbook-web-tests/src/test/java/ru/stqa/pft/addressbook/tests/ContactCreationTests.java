@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -16,17 +16,17 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class ContactCreationTests extends TestBase {
 
   @DataProvider
-  public Iterator<Object[]> validContacts() {
+  public Iterator<Object[]> validContacts() throws IOException {
     List<Object[]> list = new ArrayList<Object[]>();
-    list.add(new Object[] {new ContactData(). withFirstname("firstname1").withLastname("lastname1").withNickname("nickname1").
-            withCompany("company1").withAddress("address1").withHomePhone("homephone1").withMobilePhone("mobile1").withWorkPhone("workphone1")
-            .withEmailOne("emailsOne1").withEmailTwo("emailTwo1").withEmailThree("emailThree1")});
-    list.add(new Object[] {new ContactData(). withFirstname("firstname2").withLastname("lastname2").withNickname("nickname2").
-            withCompany("company2").withAddress("address12").withHomePhone("homephone2").withMobilePhone("mobile2").withWorkPhone("workphone2")
-            .withEmailOne("emailsOne2").withEmailTwo("emailTwo2").withEmailThree("emailThree2")});
-    list.add(new Object[] {new ContactData(). withFirstname("firstname3").withLastname("lastname3").withNickname("nickname3").
-            withCompany("company3").withAddress("address13").withHomePhone("homephone3").withMobilePhone("mobile3").withWorkPhone("workphone3")
-            .withEmailOne("emailsOne3").withEmailTwo("emailTwo3").withEmailThree("emailThree3")});
+    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.csv")));
+    String line = reader.readLine();
+    while (line != null) {
+      String[] split = line.split("; ");
+      list.add(new Object[]{new ContactData().withFirstname(split[0]).withLastname(split[1]).withNickname(split[2]).withCompany(split[3])
+              .withAddress(split[4]).withHomePhone(split[5]).withMobilePhone(split[6]).withWorkPhone(split[7])
+              .withEmailOne(split[8]).withEmailTwo(split[9]).withEmailThree(split[10])});
+      line = reader.readLine();
+    }
     return list.iterator();
   }
 
