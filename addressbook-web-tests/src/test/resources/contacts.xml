@@ -25,4 +25,17 @@
     <emailTwo>emailTwo 1</emailTwo>
     <emailThree>emailThree 1</emailThree>
   </contact>
+  <contact>
+    <firstname>firstname 2</firstname>
+    <lastname>lastname 2</lastname>
+    <nickname>nickname 2</nickname>
+    <company>company 2</company>
+    <address>address, ul. 2</address>
+    <workPhone>workphone 2</workPhone>
+    <mobile>mobile 2</mobile>
+    <homePhone>homephone 2</homePhone>
+    <emailOne>emailOne 2</emailOne>
+    <emailTwo>emailTwo 2</emailTwo>
+    <emailThree>emailThree 2</emailThree>
+  </contact>
 </list>
