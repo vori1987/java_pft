@@ -13,13 +13,13 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.2'
 }
 
-tasks testGroups(type: Test) {
+task testGroups(type: Test) {
     useTestNG {
         suites 'src/test/resources/testng-groups.xml'
     }
 }
 
-tasks testContacts(type: Test) {
+task testContacts(type: Test) {
     useTestNG {
         suites 'src/test/resources/testng-contacts.xml'
     }
