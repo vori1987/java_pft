@@ -90,9 +90,6 @@ public class ContactData {
   @Column(name = "photo")
   private String photo;
 
-  public File getPhoto() {
-    return new File(photo);
-  }
 
   public ContactData withPhoto(File photo) {
     this.photo = photo.getPath();
@@ -237,6 +234,10 @@ public class ContactData {
 
   public String getGroup() {
     return group;
+  }
+
+  public File getPhoto() {
+    return new File(photo);
   }
 
   public String getAllContactInfo() {

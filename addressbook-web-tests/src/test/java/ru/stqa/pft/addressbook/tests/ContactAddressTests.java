@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class ContactAdressTests extends TestBase {
+public class ContactAddressTests extends TestBase {
 
   @BeforeMethod
   public void ensurePreconditions() {
@@ -31,7 +31,7 @@ public class ContactAdressTests extends TestBase {
   private String mergeAdresses(ContactData contact) {
     return Arrays.asList(contact.getAddress())
             .stream().filter((s) -> !s.equals(""))
-            .map(ContactAdressTests::cleaned)
+            .map(ContactAddressTests::cleaned)
             .collect(Collectors.joining("\n"));
   }
 

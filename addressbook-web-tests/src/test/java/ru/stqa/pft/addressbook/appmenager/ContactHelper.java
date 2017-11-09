@@ -57,18 +57,12 @@ public class ContactHelper extends HelperBase {
 //    click(By.name("select[]"));
 //  }
 
-
-//  public void initContactModification() {
-//    click(By.xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[8]"));
-//  }
-
 //  public void selectContact(int index) {
 //    wd.findElements(By.name("selected[]")).get(index).click();
 //  }
 
   public void selectContactById(int id) {
     wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
-   // wd.findElement(By.xpath("/html/body/div/div[4]/form[2]/table/tbody/tr[2]/td[7]/a/img")).click();
   }
 
   public void initContactInfoById(int id) {
@@ -105,12 +99,7 @@ public class ContactHelper extends HelperBase {
     returnToHomePage();
   }
 
-  //  public void editSelectedContact(int index) {
-//    //click(By.xpath("//tr[@name='entry'][1]//td[@class='center'][3]"));
-//    wd.findElements(By.cssSelector("a[href^='edit.php']")).get(index).click();
-//  }
-
-//   public void editSelectedContact(int index) {
+ //   public void editSelectedContact(int index) {
 //    //click(By.xpath("//tr[@name='entry'][1]//td[@class='center'][3]"));
 //   wd.findElements(By.cssSelector("a[href^='edit.php']")).get(index + 1).click();
 //  }
@@ -121,13 +110,6 @@ public class ContactHelper extends HelperBase {
     //wd.findElements(By.cssSelector("tr[name=entry] a[href='edit.php?id=" + id + "]")).get(id).click();
     wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
   }
-
-  //  public void delete(int index) {
-//    selectContact(index);
-//    deleteSelectedContact();
-//    alertOk();
-//    returnToHomePage();
-//  }
 
   public void delete(ContactData contact) {
     selectContactById(contact.getId());
