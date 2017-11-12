@@ -55,13 +55,13 @@ public class GroupCreationTests extends TestBase {
     }
   }
 
-  @Test(dataProvider = "validGroupsFromJson")
+  @Test(dataProvider = "validGroupsFromXml")
   public void testGroupCreation(GroupData group) {
     app.goTo().groupPage();
-    Groups before = app.group().all();
+    Groups before = app.db().groups();
     app.group().create(group);
     assertThat(app.group().count(), equalTo(before.size() + 1));
-    Groups after = app.group().all();
+    Groups after = app.db().groups();
     //    int max = 0;
 //    for (GroupData g : after) {
 //      if (g.getId() > max) {
@@ -70,6 +70,7 @@ public class GroupCreationTests extends TestBase {
 //    }
     assertThat(after, equalTo(
             before.withAdded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
+    verifyGroupListInUi();
   }
 
   @Test(enabled = false)
