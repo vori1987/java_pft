@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 
+import java.io.File;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -70,7 +71,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void deleteSelectedContact() {
-   // click(By.xpath("/html/body/div/div[4]/form[2]/div[2]/input"));
+    // click(By.xpath("/html/body/div/div[4]/form[2]/div[2]/input"));
     click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
   }
 
@@ -91,7 +92,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void modify(ContactData contact) {
-    selectContactById(contact.getId());
+   // selectContactById(contact.getId());
     editSelectedContactById(contact.getId());
     fillContactForm(contact, false);
     submitContactModification();
@@ -99,7 +100,7 @@ public class ContactHelper extends HelperBase {
     returnToHomePage();
   }
 
- //   public void editSelectedContact(int index) {
+  //   public void editSelectedContact(int index) {
 //    //click(By.xpath("//tr[@name='entry'][1]//td[@class='center'][3]"));
 //   wd.findElements(By.cssSelector("a[href^='edit.php']")).get(index + 1).click();
 //  }
@@ -169,7 +170,7 @@ public class ContactHelper extends HelperBase {
     List<WebElement> elements = wd.findElements((By.name("entry")));
     for (WebElement element : elements) {
       int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-      String firstname =  element.findElement(By.xpath(".//td[3]")).getText();
+      String firstname = element.findElement(By.xpath(".//td[3]")).getText();
       String lastname = element.findElement(By.xpath(".//td[2]")).getText();
       String allPhones = element.findElement(By.xpath(".//td[6]")).getText();
       String allEmails = element.findElement(By.xpath(".//td[5]")).getText();
