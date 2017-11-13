@@ -14,10 +14,11 @@ import java.io.File;
 @XStreamAlias("contact")
 
 public class ContactData {
+
   @XStreamOmitField
   @Id
   @Column(name = "id")
-  private int id = Integer.MAX_VALUE;
+  private int id;
 
   @Expose
   @Column(name = "firstname")
