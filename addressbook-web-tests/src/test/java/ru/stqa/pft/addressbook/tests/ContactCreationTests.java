@@ -92,8 +92,8 @@ public class ContactCreationTests extends TestBase {
 //    assertEquals(before, after);
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+    verifyContactListInUi();
   }
-
 
   @Test(enabled = false)
   public void testBadContactCreation() {
