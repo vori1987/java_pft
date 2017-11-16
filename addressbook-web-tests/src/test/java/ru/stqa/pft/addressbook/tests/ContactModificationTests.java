@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.Groups;
 
 import java.io.File;
 
@@ -29,10 +30,11 @@ public class ContactModificationTests extends TestBase {
   public void testContactModification() {
     Contacts before = app.db().contacts();
     ContactData modifiedContact = before.iterator().next();
+    Groups groups = app.db().groups();
     File photo = new File("src/test/resources/test_Image.png");
     ContactData contact = new ContactData().withId(modifiedContact.getId()).
             withFirstname("test1").withLastname("test2").withNickname("test3").withCompany("MF").withAddress("Kupa2").withMobilePhone(null)
-            .withEmailOne(null).withHomePhone(null).withGroup(null).withPhoto(photo);
+            .withEmailOne(null).withHomePhone(null).withPhoto(photo);
     app.goTo().goToHomePage();
     app.contact().modify(contact);
     // assertThat(app.contact().count(), equalTo(before.size()));
@@ -48,6 +50,4 @@ public class ContactModificationTests extends TestBase {
     assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));
     verifyContactListInUi();
   }
-
-
 }

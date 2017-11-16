@@ -3,22 +3,30 @@ package ru.stqa.pft.addressbook.tests;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.GroupData;
+import ru.stqa.pft.addressbook.model.Groups;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ContactCreationTests extends TestBase {
+
+  @BeforeMethod
+  public void ensurePreconditionsContact() {
+    if (app.db().groups().size() == 0) {
+      app.goTo().groupPage();
+      app.group().create(new GroupData().withName("Group_Test1"));
+    }
+  }
 
   @DataProvider
   public Iterator<Object[]> validContactsFromCsv() throws IOException {
@@ -68,13 +76,13 @@ public class ContactCreationTests extends TestBase {
     }
   }
 
-  @Test(dataProvider = "validContactsFromXml")
+  @Test(enabled = false)//(dataProvider = "validContactsFromXml")
   public void testContactCreation(ContactData contact) {
     app.goTo().goToHomePage();
     Contacts before = app.db().contacts();
     app.contact().create(contact, true);
     assertThat(app.contact().count(), equalTo(before.size() + 1));
-    Contacts after = app.db().contacts();;
+    Contacts after = app.db().contacts();
     //    int max = 0;
 //    for (ContactData c : after) {
 //      if (c.getId() > max) {
@@ -106,7 +114,23 @@ public class ContactCreationTests extends TestBase {
     assertThat(after, equalTo(before));
   }
 
-
+  @Test
+  public void testOldContactCreationForm() {
+    Groups groups = app.db().groups();
+    File photo = new File("src/test/resources/test_Image.png");
+    Contacts before = app.db().contacts();
+    ContactData newContact = new ContactData().withFirstname("test_name1").withLastname("test_surname")
+            .withPhoto(photo).inGroup(groups.iterator().next());
+    app.goTo().goToHomePage();
+    app.contact().initContactCreation();
+    app.contact().fillContactForm(newContact, true);
+    app.contact().submitContactCreation();
+    app.contact().returnToHomePage();
+    assertThat(app.contact().count(), equalTo(before.size() + 1));
+    Contacts after = app.db().contacts();
+    assertThat(after, equalTo(
+            before.withAdded(newContact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+  }
 //  @Test
 //  public void testContactCreation() {
 //    app.goTo().goToHomePage();

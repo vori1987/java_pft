@@ -4,15 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.GroupData;
+import ru.stqa.pft.addressbook.model.Groups;
 
-import java.io.File;
-import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
-import static com.sun.org.apache.xalan.internal.lib.ExsltStrings.split;
 
 public class ContactHelper extends HelperBase {
 
@@ -44,8 +44,9 @@ public class ContactHelper extends HelperBase {
 
 
     if (creation) {
-      if (contactData.getGroup() != null) {
-        new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+      if (contactData.getGroups().size() > 0) {
+        Assert.assertTrue(contactData.getGroups().size() == 1);
+        new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getName());
       }
     }
   }
@@ -64,10 +65,6 @@ public class ContactHelper extends HelperBase {
 
   public void selectContactById(int id) {
     wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
-  }
-
-  public void initContactInfoById(int id) {
-    wd.findElement(By.cssSelector(String.format("a[href='view.php?id=%s']", id))).click();
   }
 
   public void deleteSelectedContact() {
@@ -92,7 +89,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void modify(ContactData contact) {
-   // selectContactById(contact.getId());
+    // selectContactById(contact.getId());
     editSelectedContactById(contact.getId());
     fillContactForm(contact, false);
     submitContactModification();
@@ -210,5 +207,23 @@ public class ContactHelper extends HelperBase {
   public void initContactModificationById(int id) {
     wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
   }
-}
 
+  public void dropDawnGroupMenu() {
+    returnToHomePage();
+    wd.findElement(By.name("group")).click();
+  }
+
+  public void SelectGroupFromDropDawnMenu(Groups groups) {
+//          }
+//getGroups.size()
+//Math.
+    wd.findElement(By.xpath("/html/body/div/div[4]/form[1]/select/option[3]")).click();
+//    //wd.findElement(By.id()).click();
+//  }
+//            }
+  }
+
+  public void RemoveSelectedGroupFromContact() {
+    wd.findElement(By.xpath("/html/body/div/div[4]/form[2]/div[3]/input")).click();
+  }
+}

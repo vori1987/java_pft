@@ -7,6 +7,8 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.File;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -71,9 +73,6 @@ public class ContactData {
   @Column(name = "email3")
   private String emailThree;
 
-  @Transient
-  private String group;
-
   @Expose
   @Transient
   private String allPhones;
@@ -91,6 +90,10 @@ public class ContactData {
   @Column(name = "photo")
   private String photo;
 
+  @ManyToMany(fetch = FetchType.EAGER)
+  @JoinTable(name = "address_in_groups", joinColumns = @JoinColumn(name = "id")
+  , inverseJoinColumns = @JoinColumn(name = "group_id"))
+    private Set<GroupData> groups = new HashSet<GroupData>();
 
   public ContactData withPhoto(File photo) {
     this.photo = photo.getPath();
@@ -172,8 +175,8 @@ public class ContactData {
     return this;
   }
 
-  public ContactData withGroup(String group) {
-    this.group = group;
+  public ContactData inGroup(GroupData group){ //setter dla Group_List
+    groups.add(group);
     return this;
   }
 
@@ -233,10 +236,6 @@ public class ContactData {
     return allEmails;
   }
 
-  public String getGroup() {
-    return group;
-  }
-
   public File getPhoto() {
     if (photo == null) {
       return null;
@@ -248,6 +247,12 @@ public class ContactData {
   public String getAllContactInfo() {
     return allContactInfo;
   }
+
+  public Groups getGroups() {
+    return new Groups(groups);
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
