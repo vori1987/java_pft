@@ -92,8 +92,8 @@ public class ContactData {
 
   @ManyToMany(fetch = FetchType.EAGER)
   @JoinTable(name = "address_in_groups", joinColumns = @JoinColumn(name = "id")
-  , inverseJoinColumns = @JoinColumn(name = "group_id"))
-    private Set<GroupData> groups = new HashSet<GroupData>();
+          , inverseJoinColumns = @JoinColumn(name = "group_id"))
+  private Set<GroupData> groups = new HashSet<GroupData>();
 
   public ContactData withPhoto(File photo) {
     this.photo = photo.getPath();
@@ -175,7 +175,7 @@ public class ContactData {
     return this;
   }
 
-  public ContactData inGroup(GroupData group){ //setter dla Group_List
+  public ContactData inGroup(GroupData group) { //setter dla Group_List
     groups.add(group);
     return this;
   }
@@ -251,7 +251,6 @@ public class ContactData {
   public Groups getGroups() {
     return new Groups(groups);
   }
-
 
 
   @Override

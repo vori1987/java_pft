@@ -38,6 +38,10 @@ public class HelperBase {
     }
   }
 
+  public void deleteUser(){
+    wd.findElement(By.cssSelector("input[value='Delete User']")).click();
+  }
+
   public boolean isAlertPresent() {
     try {
       wd.switchTo().alert();
