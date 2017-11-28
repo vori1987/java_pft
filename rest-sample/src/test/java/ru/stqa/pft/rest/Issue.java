@@ -2,10 +2,9 @@ package ru.stqa.pft.rest;
 
 public class Issue {
 
-
     private int id;
-    private  String subject;
-    private  String description;
+    private String subject;
+    private String description;
 
     public int getId() {
         return id;
@@ -45,6 +44,7 @@ public class Issue {
         if (subject != null ? !subject.equals(issue.subject) : issue.subject != null) return false;
         return description != null ? description.equals(issue.description) : issue.description == null;
     }
+
 
     @Override
     public int hashCode() {
