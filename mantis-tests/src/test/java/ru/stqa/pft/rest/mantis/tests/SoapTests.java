@@ -12,7 +12,7 @@ import java.util.Set;
 
 public class SoapTests extends TestBase {
 
-    @Test
+    @Test(enabled = false)
     public void testGetProjects() throws MalformedURLException, ServiceException, RemoteException {
         Set<Project> projects = app.soap().getProjects();
         System.out.println(projects.size());
@@ -21,7 +21,7 @@ public class SoapTests extends TestBase {
         }
     }
 
-    @Test(enabled = false)
+    @Test
     public void testCreateIssue() throws RemoteException, ServiceException, MalformedURLException {
         Set<Project> projects = app.soap().getProjects();
         Issue issue = new Issue().withSummary("Test issue").withDescription("Test issue description")
