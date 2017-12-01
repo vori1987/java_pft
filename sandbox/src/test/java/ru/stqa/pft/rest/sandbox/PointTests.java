@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 import exercise1.Point;
 
 public class PointTests {
-  @Test
+
+ @Test
   public void testDistance() {
     Point p1 = new Point(1, 2);
     Point p2 = new Point(1, 2);
