@@ -1,0 +1,235 @@
+{
+  "features" : [ {
+    "title" : "Without feature",
+    "statistic" : {
+      "total" : 19,
+      "passed" : 18,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 1,
+      "broken" : 0
+    },
+    "stories" : [ {
+      "uid" : "9b0baaac03d74e7d",
+      "title" : "Without story",
+      "statistic" : {
+        "total" : 19,
+        "passed" : 18,
+        "pending" : 0,
+        "canceled" : 0,
+        "failed" : 1,
+        "broken" : 0
+      },
+      "testCases" : [ {
+        "uid" : "ac52c43052156a57",
+        "name" : "testGroupDeletion",
+        "title" : "Test group deletion",
+        "time" : {
+          "start" : 1512395237375,
+          "stop" : 1512395238033,
+          "duration" : 658
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "e20b7db5bcf6e38f",
+        "name" : "testGroupModification",
+        "title" : "Test group modification",
+        "time" : {
+          "start" : 1512394952603,
+          "stop" : 1512394953577,
+          "duration" : 974
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "8196adcb181c4bed",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 0'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 0'}]",
+        "time" : {
+          "start" : 1512394954010,
+          "stop" : 1512394955054,
+          "duration" : 1044
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "44d6f12288b314ad",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 1'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 1'}]",
+        "time" : {
+          "start" : 1512394955057,
+          "stop" : 1512394955875,
+          "duration" : 818
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "8b88543b707b4096",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 2'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 2'}]",
+        "time" : {
+          "start" : 1512394955877,
+          "stop" : 1512394956719,
+          "duration" : 842
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "178aa2f6e7888448",
+        "name" : "testGroupDeletion",
+        "title" : "Test group deletion",
+        "time" : {
+          "start" : 1512394956723,
+          "stop" : 1512394957109,
+          "duration" : 386
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "1b655e7d77b70ffc",
+        "name" : "testGroupModification",
+        "title" : "Test group modification",
+        "time" : {
+          "start" : 1512388517665,
+          "stop" : 1512388518901,
+          "duration" : 1236
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "be429900cf1c2934",
+        "name" : "testGroupModification",
+        "title" : "Test group modification",
+        "time" : {
+          "start" : 1512394724110,
+          "stop" : 1512394725183,
+          "duration" : 1073
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "99cec955039003cf",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 0'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 0'}]",
+        "time" : {
+          "start" : 1512395198980,
+          "stop" : 1512395200606,
+          "duration" : 1626
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "dfee91e289e3e128",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 1'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 1'}]",
+        "time" : {
+          "start" : 1512395200644,
+          "stop" : 1512395201529,
+          "duration" : 885
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "e1c57e59409e3143",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 2'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 2'}]",
+        "time" : {
+          "start" : 1512395201533,
+          "stop" : 1512395202392,
+          "duration" : 859
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "b9759628822dc75b",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 0'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 0'}]",
+        "time" : {
+          "start" : 1512395158275,
+          "stop" : 1512395159768,
+          "duration" : 1493
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "10da2f4c3777341c",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 1'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 1'}]",
+        "time" : {
+          "start" : 1512395159805,
+          "stop" : 1512395160726,
+          "duration" : 921
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "44ae79cfd0030951",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 2'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 2'}]",
+        "time" : {
+          "start" : 1512395160729,
+          "stop" : 1512395161765,
+          "duration" : 1036
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "f954a776726c067e",
+        "name" : "testGroupModification",
+        "title" : "Test group modification",
+        "time" : {
+          "start" : 1512395861502,
+          "stop" : 1512395862659,
+          "duration" : 1157
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "f33d7d548456ee82",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 0'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 0'}]",
+        "time" : {
+          "start" : 1512395863082,
+          "stop" : 1512395864040,
+          "duration" : 958
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "89ba7e18fb46b1a8",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 1'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 1'}]",
+        "time" : {
+          "start" : 1512395864044,
+          "stop" : 1512395864895,
+          "duration" : 851
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "c6c2677a97b192af",
+        "name" : "testGroupCreation[GroupData{id='0', name='test 2'}]",
+        "title" : "Test group creation [GroupData{id='0', name='test 2'}]",
+        "time" : {
+          "start" : 1512395864898,
+          "stop" : 1512395865771,
+          "duration" : 873
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "4ec6def59aae5878",
+        "name" : "testGroupDeletion",
+        "title" : "Test group deletion",
+        "time" : {
+          "start" : 1512395865779,
+          "stop" : 1512395866631,
+          "duration" : 852
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      } ]
+    } ]
+  } ]
+}

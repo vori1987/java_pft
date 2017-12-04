@@ -1,7 +1,6 @@
 package ru.stqa.pft.addressbook.appmenager;
 
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -53,12 +52,13 @@ public class ApplicationManager {
         } else {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName(browser);
+            capabilities.setPlatform(Platform.fromString(System.getProperty("platform", "Win7")));
             wd = new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilities);
         }
 
         wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         wd.get(properties.getProperty("web.baseUrl"));
-        Thread.sleep(5000);
+       // Thread.sleep(5000);
         groupHelper = new GroupHelper(wd);
         contactHelper = new ContactHelper(wd);
         navigationHelper = new NavigationHelper(wd);
@@ -68,6 +68,10 @@ public class ApplicationManager {
 
     public void stop() {
         wd.quit();
+    }
+
+    public byte[] takeScreenshot(){
+        return ((TakesScreenshot)  wd).getScreenshotAs(OutputType.BYTES);
     }
 
     public GroupHelper group() {
