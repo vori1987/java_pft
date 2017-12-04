@@ -54,7 +54,7 @@ public class ApplicationManager {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName(browser);
             wd = new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilities);
-            Thread.sleep(5000);
+
         }
 
         wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
@@ -64,6 +64,7 @@ public class ApplicationManager {
         navigationHelper = new NavigationHelper(wd);
         sessionHelper = new SessionHelper(wd);
         sessionHelper.login(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPassword"));
+        Thread.sleep(5000);
     }
 
     public void stop() {
