@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Jython 2.7.0 on java1.8.0_152)" generated="20171204 16:24:25.971">
+<suite source="C:\DEVELOP\java_pft2\addressbook-web-tests\src\test\resources\rf" name="Rf" id="s1">
+<suite source="C:\DEVELOP\java_pft2\addressbook-web-tests\src\test\resources\rf\groups.robot" name="Groups" id="s1-s1">
+<kw type="setup" library="ru.stqa.pft.addressbook.rf.AddressbookKeywords" name="Init Application Manager">
+<msg level="INFO" timestamp="20171204 16:24:33.560">1512401070115	addons.manager	DEBUG	Application has been upgraded
+1512401070144	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: ["XPIProvider"]
+1512401070145	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: ["LightweightThemeManager"]
+1512401070148	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/GMPProvider.jsm
+1512401070150	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
+1512401070151	addons.manager	DEBUG	Starting provider: XPIProvider
+1512401070151	addons.xpi	DEBUG	startup
+1512401070153	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\volod\AppData\Local\Temp\anonymous7059277073742078665webdriver-profile\extensions\fxdriver@googlecode.com
+1512401070153	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\volod\AppData\Local\Temp\anonymous7059277073742078665webdriver-profile\extensions\webdriver-staging
+1512401070154	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1512401070154	addons.xpi	INFO	Mapping aushelper@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1512401070155	addons.xpi	INFO	Mapping e10srollout@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1512401070155	addons.xpi	INFO	Mapping firefox@getpocket.com to C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1512401070155	addons.xpi	INFO	Mapping webcompat@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1512401070156	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+1512401070156	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1512401070157	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1512401070157	addons.xpi	INFO	Mapping {4ED1F68A-5463-4931-9384-8FFF5ED91D92} to C:\Program Files (x86)\McAfee\SiteAdvisor\e10ssaffplg.xpi
+1512401070157	addons.xpi	DEBUG	checkForChanges
+1512401070157	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1512401070158	addons.xpi	DEBUG	Loaded add-on state from prefs: {}
+1512401070158	addons.xpi	DEBUG	New add-on fxdriver@googlecode.com in app-profile
+1512401070159	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1512401070166	addons.xpi	DEBUG	New add-on aushelper@mozilla.org in app-system-defaults
+1512401070166	addons.xpi	DEBUG	getModTime: Recursive scan of aushelper@mozilla.org
+1512401070167	addons.xpi	DEBUG	New add-on e10srollout@mozilla.org in app-system-defaults
+1512401070167	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
+1512401070168	addons.xpi	DEBUG	New add-on firefox@getpocket.com in app-system-defaults
+1512401070168	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
+1512401070168	addons.xpi	DEBUG	New add-on webcompat@mozilla.org in app-system-defaults
+1512401070169	addons.xpi	DEBUG	getModTime: Recursive scan of webcompat@mozilla.org
+1512401070169	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1512401070169	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1512401070170	addons.xpi	DEBUG	New add-on {4ED1F68A-5463-4931-9384-8FFF5ED91D92} in winreg-app-global
+1512401070170	addons.xpi	DEBUG	getModTime: Recursive scan of {4ED1F68A-5463-4931-9384-8FFF5ED91D92}
+1512401070170	addons.xpi	DEBUG	getInstallState changed: true, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\volod\\AppData\\Local\\Temp\\anonymous7059277073742078665webdriver-profile\\extensions\\fxdriver@googlecode.com","st":1512401069693,"mt":1512401069685}},"app-system-defaults":{"aushelper@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\aushelper@mozilla.org.xpi","st":1510729635233},"e10srollout@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi","st":1510729635226},"firefox@getpocket.com":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi","st":1510729635220},"webcompat@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\webcompat@mozilla.org.xpi","st":1510729635210}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","st":1510729635241}},"winreg-app-global":{"{4ED1F68A-5463-4931-9384-8FFF5ED91D92}":{"d":"C:\\Program Files (x86)\\McAfee\\SiteAdvisor\\e10ssaffplg.xpi","st":1509361468000}}}
+1512401070177	addons.xpi-utils	DEBUG	Opening XPI database C:\Users\volod\AppData\Local\Temp\anonymous7059277073742078665webdriver-profile\extensions.json
+1512401070179	addons.xpi-utils	DEBUG	New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1512401070196	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070197	addons.xpi-utils	DEBUG	New add-on aushelper@mozilla.org installed in app-system-defaults
+1512401070200	DeferredSave.extensions.json	DEBUG	Starting timer
+1512401070202	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070202	addons.xpi-utils	DEBUG	New add-on e10srollout@mozilla.org installed in app-system-defaults
+1512401070206	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070207	addons.xpi-utils	DEBUG	New add-on firefox@getpocket.com installed in app-system-defaults
+1512401070212	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070212	addons.xpi-utils	DEBUG	New add-on webcompat@mozilla.org installed in app-system-defaults
+1512401070216	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070216	addons.xpi-utils	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1512401070220	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070220	addons.xpi-utils	DEBUG	New add-on {4ED1F68A-5463-4931-9384-8FFF5ED91D92} installed in winreg-app-global
+1512401070259	DeferredSave.extensions.json	DEBUG	Starting write
+1512401070455	addons.xpi-utils	WARN	Disabling foreign installed add-on {4ED1F68A-5463-4931-9384-8FFF5ED91D92} in winreg-app-global
+1512401070456	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070456	DeferredSave.extensions.json	DEBUG	Data changed while write in progress
+1512401070457	addons.manager	DEBUG	Registering startup change 'installed' for fxdriver@googlecode.com
+1512401070457	addons.xpi-utils	DEBUG	Make addon app-profile:fxdriver@googlecode.com visible
+1512401070461	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1512401070461	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070462	addons.manager	DEBUG	Registering startup change 'installed' for aushelper@mozilla.org
+1512401070468	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1512401070471	addons.xpi	DEBUG	Calling bootstrap method install on aushelper@mozilla.org version 2.0
+1512401070471	addons.xpi-utils	DEBUG	Make addon app-system-defaults:aushelper@mozilla.org visible
+1512401070472	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1512401070472	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070472	addons.manager	DEBUG	Registering startup change 'installed' for e10srollout@mozilla.org
+1512401070472	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1512401070474	addons.xpi	DEBUG	Calling bootstrap method install on e10srollout@mozilla.org version 1.10
+1512401070475	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1512401070475	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1512401070476	addons.xpi-utils	DEBUG	Make addon app-system-defaults:e10srollout@mozilla.org visible
+1512401070476	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1512401070476	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070476	addons.manager	DEBUG	Registering startup change 'installed' for firefox@getpocket.com
+1512401070476	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1512401070480	addons.xpi	DEBUG	Calling bootstrap method install on firefox@getpocket.com version 1.0.5
+1512401070480	addons.xpi-utils	DEBUG	Make addon app-system-defaults:firefox@getpocket.com visible
+1512401070480	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1512401070480	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070481	addons.manager	DEBUG	Registering startup change 'installed' for webcompat@mozilla.org
+1512401070481	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1512401070483	addons.xpi	DEBUG	Calling bootstrap method install on webcompat@mozilla.org version 1.0
+1512401070483	addons.xpi-utils	DEBUG	Make addon app-system-defaults:webcompat@mozilla.org visible
+1512401070483	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1512401070483	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070484	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1512401070484	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1512401070484	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070484	addons.manager	DEBUG	Registering startup change 'installed' for {4ED1F68A-5463-4931-9384-8FFF5ED91D92}
+1512401070484	addons.manager	DEBUG	Registering startup change 'installed' for {4ED1F68A-5463-4931-9384-8FFF5ED91D92}
+1512401070484	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\McAfee\SiteAdvisor\e10ssaffplg.xpi
+1512401070486	addons.xpi	DEBUG	Calling bootstrap method install on {4ED1F68A-5463-4931-9384-8FFF5ED91D92} version 6.0.0.118
+1512401070486	addons.xpi-utils	DEBUG	Make addon winreg-app-global:{4ED1F68A-5463-4931-9384-8FFF5ED91D92} visible
+1512401070486	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1512401070486	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070487	addons.xpi	DEBUG	Updating XPIState for {"id":"fxdriver@googlecode.com","syncGUID":"{03e4979f-efd1-4d2a-818a-264a1c5fdf3c}","location":"app-profile","version":"3.6.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Firefox WebDriver","description":"WebDriver implementation for Firefox","creator":"Simon Stewart","homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Users\\volod\\AppData\\Local\\Temp\\anonymous7059277073742078665webdriver-profile\\extensions\\fxdriver@googlecode.com","installDate":1512401069693,"updateDate":1512401069693,"applyBackgroundUpdates":1,"bootstrap":false,"skinnable":false,"size":3279485,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"3.0","maxVersion":"48.0"}],"targetPlatforms":[{"os":"Darwin","abi":null},{"os":"SunOS","abi":null},{"os":"FreeBSD","abi":null},{"os":"OpenBSD","abi":null},{"os":"WINNT","abi":null},{"os":"Linux","abi":null}],"multiprocessCompatible":false,"signedState":0,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1512401070487	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1512401070491	addons.xpi	DEBUG	Updating XPIState for {"id":"aushelper@mozilla.org","syncGUID":"{8a63b77e-f488-4b9d-a193-68ff688b9944}","location":"app-system-defaults","version":"2.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Application Update Service Helper","description":"Sets value(s) in the update url based on custom checks.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\aushelper@mozilla.org.xpi","installDate":1510729635233,"updateDate":1510729635233,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":8488,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.5.0","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1512401070491	addons.xpi	DEBUG	getModTime: Recursive scan of aushelper@mozilla.org
+1512401070492	addons.xpi	DEBUG	Updating XPIState for {"id":"e10srollout@mozilla.org","syncGUID":"{f3fbabe8-28ca-4e50-906d-091cc905c26c}","location":"app-system-defaults","version":"1.10","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Multi-process staged rollout","description":"Staged rollout of Firefox multi-process feature.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi","installDate":1510729635226,"updateDate":1510729635226,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":8145,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.5.0","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1512401070493	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
+1512401070493	addons.xpi	DEBUG	Updating XPIState for {"id":"firefox@getpocket.com","syncGUID":"{1fc981d0-2bbf-4518-b0c2-cf2323d29837}","location":"app-system-defaults","version":"1.0.5","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Pocket","description":"When you find something you want to view later, put it in Pocket.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi","installDate":1510729635220,"updateDate":1510729635220,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":920292,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.5.0","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1512401070494	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
+1512401070494	addons.xpi	DEBUG	Updating XPIState for {"id":"webcompat@mozilla.org","syncGUID":"{852e782a-b455-4090-a40a-0def612bad75}","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Web Compat","description":"Urgent post-release fixes for web compatibility.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\features\\webcompat@mozilla.org.xpi","installDate":1510729635210,"updateDate":1510729635210,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":1456,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.5.0","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1512401070494	addons.xpi	DEBUG	getModTime: Recursive scan of webcompat@mozilla.org
+1512401070495	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"{a819a9b3-9cd0-4cc9-8099-a18726cb7c26}","location":"app-global","version":"52.5.0","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{"32":"icon.png","48":"icon.png"},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","installDate":1510729635241,"updateDate":1510729635241,"applyBackgroundUpdates":1,"skinnable":true,"size":19587,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.5.0","maxVersion":"52.5.0"}],"targetPlatforms":[],"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false}
+1512401070495	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1512401070496	addons.xpi	DEBUG	Updating XPIState for {"id":"{4ED1F68A-5463-4931-9384-8FFF5ED91D92}","syncGUID":"{be00b63d-d295-4c7e-9448-cd1d05b54ea0}","location":"winreg-app-global","version":"6.0.0.118","type":"webextension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{"128":"images/siteadvisor.gif"},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null},"visible":true,"active":false,"userDisabled":true,"appDisabled":false,"descriptor":"C:\\Program Files (x86)\\McAfee\\SiteAdvisor\\e10ssaffplg.xpi","installDate":1509361468000,"updateDate":1509361468000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":802349,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["en"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["ja"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["fr"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["sv"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["cs"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["hu"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["es-mx"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["fr-ca"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["ko"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["it"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["no"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["de"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["zh"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["sk"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["sr"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["pt-br"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["ru"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["pl"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["hr"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["fi"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["pt"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["el"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["es"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["da"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["tr"]},{"name":"McAfee WebAdvisor","description":"McAfee WebAdvisor","creator":null,"developers":null,"translators":null,"contributors":null,"locales":["nl"]}],"targetApplications":[{"id":"toolkit@mozilla.org","minVersion":"51.0","maxVersion":null}],"targetPlatforms":[],"multiprocessCompatible":true,"signedState":2,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false}
+1512401070497	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1512401070497	DeferredSave.extensions.json	DEBUG	Save changes
+1512401070497	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1512401070497	addons.xpi-utils	DEBUG	Updating add-on states
+1512401070499	addons.xpi-utils	DEBUG	Writing add-ons list
+1512401070504	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1512401070505	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 2.0
+1512401070506	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1512401070506	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.10
+1512401070507	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1512401070508	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1512401070508	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1512401070509	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.0
+1512401070511	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1512401070511	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1512401070511	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1512401070511	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1512401070511	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1512401070511	addons.manager	DEBUG	Starting provider: GMPProvider
+1512401070519	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1512401070519	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1512401070519	addons.manager	DEBUG	Starting provider: PluginProvider
+1512401070519	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1512401070519	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1512401070520	addons.manager	DEBUG	Completed startup sequence
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+1512401070839	addons.manager	DEBUG	Starting provider: &lt;unnamed-provider&gt;
+1512401070840	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+1512401070840	addons.manager	DEBUG	Provider finished startup: &lt;unnamed-provider&gt;
+1512401071023	DeferredSave.extensions.json	DEBUG	Write succeeded
+1512401071023	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 19
+1512401071023	DeferredSave.extensions.json	DEBUG	Starting timer
+1512401071047	DeferredSave.extensions.json	DEBUG	Starting write
+1512401071051	addons.repository	DEBUG	No addons.json found.
+1512401071051	DeferredSave.addons.json	DEBUG	Save changes
+1512401071054	DeferredSave.addons.json	DEBUG	Starting timer
+1512401071074	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1512401071075	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1512401071075	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1512401071097	DeferredSave.extensions.json	DEBUG	Write succeeded
+1512401071118	DeferredSave.addons.json	DEBUG	Starting write
+1512401071133	DeferredSave.addons.json	DEBUG	Write succeeded
+gru 04, 2017 4:24:32 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS</msg>
+<status endtime="20171204 16:24:33.602" starttime="20171204 16:24:26.311" status="PASS"></status>
+</kw>
+<test name="Can Create Group With Valid Data" id="s1-s1-t1">
+<kw library="ru.stqa.pft.addressbook.rf.AddressbookKeywords" name="Get Group Count">
+<assign>
+<var>${old_count}</var>
+</assign>
+<msg level="INFO" timestamp="20171204 16:24:33.971">${old_count} = 15</msg>
+<status endtime="20171204 16:24:33.973" starttime="20171204 16:24:33.611" status="PASS"></status>
+</kw>
+<kw library="ru.stqa.pft.addressbook.rf.AddressbookKeywords" name="Create Group">
+<arguments>
+<arg>test name</arg>
+<arg>test header</arg>
+<arg>test footer</arg>
+</arguments>
+<status endtime="20171204 16:24:35.245" starttime="20171204 16:24:33.976" status="PASS"></status>
+</kw>
+<kw library="ru.stqa.pft.addressbook.rf.AddressbookKeywords" name="Get Group Count">
+<assign>
+<var>${new_count}</var>
+</assign>
+<msg level="INFO" timestamp="20171204 16:24:35.433">${new_count} = 16</msg>
+<status endtime="20171204 16:24:35.435" starttime="20171204 16:24:35.246" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Evaluate">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${old_count} + 1</arg>
+</arguments>
+<assign>
+<var>${expected_count}</var>
+</assign>
+<msg level="INFO" timestamp="20171204 16:24:35.454">${expected_count} = 16</msg>
+<status endtime="20171204 16:24:35.455" starttime="20171204 16:24:35.437" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Should Be Equal As Integers">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${new_count}</arg>
+<arg>${expected_count}</arg>
+</arguments>
+<status endtime="20171204 16:24:35.463" starttime="20171204 16:24:35.457" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20171204 16:24:35.466" starttime="20171204 16:24:33.606" status="PASS"></status>
+</test>
+<kw type="teardown" library="ru.stqa.pft.addressbook.rf.AddressbookKeywords" name="Stop Application Manager">
+<status endtime="20171204 16:24:36.043" starttime="20171204 16:24:35.479" status="PASS"></status>
+</kw>
+<status endtime="20171204 16:24:36.044" starttime="20171204 16:24:26.253" status="PASS"></status>
+</suite>
+<status endtime="20171204 16:24:36.060" starttime="20171204 16:24:25.987" status="PASS"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" name="Rf" id="s1">Rf</stat>
+<stat pass="1" fail="0" name="Groups" id="s1-s1">Rf.Groups</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
