@@ -1,4 +1,4 @@
-package ru.stqa.pft2.soap;
+package ru.stqa.pft.soap;
 
 import net.webservicex.GeoIP;
 import net.webservicex.GeoIPService;
